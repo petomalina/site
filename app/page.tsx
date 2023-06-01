@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import BlogHeader from './blogHeader'
+import BlogHeader from './Blog'
 
 export default function Home() {
   return (
