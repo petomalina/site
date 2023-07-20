@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import BlogHeader from './Blog'
+import Blog from './Blog'
 
 export default function Home() {
   return (
     <main>
-      <BlogHeader></BlogHeader>
+      <Blog></Blog>
     </main>
   )
 }

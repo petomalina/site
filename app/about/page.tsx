@@ -2,32 +2,32 @@ import Image from 'next/image'
 
 const timeline = [
   {
-    name: 'Founded company',
+    name: 'Worked at multiple startups',
     description:
-      'Nihil aut nam. Dignissimos a pariatur et quos omnis. Aspernatur asperiores et dolorem dolorem optio voluptate repudiandae.',
-    date: 'Aug 2021',
-    dateTime: '2021-08',
+      'I\'ve always loved startups for their fast-paced, impact driven environment. At the start of my career, I\'ve had a chance to work for a few.',
+    date: 'Nov 2013',
+    dateTime: '2013-11',
   },
   {
-    name: 'Secured $65m in funding',
+    name: 'Founded CityIdeas',
     description:
-      'Provident quia ut esse. Vero vel eos repudiandae aspernatur. Cumque minima impedit sapiente a architecto nihil.',
-    date: 'Dec 2021',
-    dateTime: '2021-12',
+      'Building on my previous experience, I\'ve co-founded a startup that was helping cities gather ideas from their citizens to improve the city life.',
+    date: 'Jan 2016',
+    dateTime: '2016-01',
   },
   {
-    name: 'Released beta',
+    name: 'Founded FlowUp',
     description:
-      'Sunt perspiciatis incidunt. Non necessitatibus aliquid. Consequatur ut officiis earum eum quia facilis. Hic deleniti dolorem quia et.',
-    date: 'Feb 2022',
-    dateTime: '2022-02',
+      'Later, I\'ve co-founded a software agency that was helping startups build their products using latest cloud technologies.',
+    date: 'Jan 2017',
+    dateTime: '2017-01',
   },
   {
-    name: 'Global launch of product',
+    name: 'Joined Kiwi.com',
     description:
-      'Ut ipsa sint distinctio quod itaque nam qui. Possimus aut unde id architecto voluptatem hic aut pariatur velit.',
-    date: 'Dec 2022',
-    dateTime: '2022-12',
+      'I am currently working at Kiwi, leading a team of 80 engineers and product managers within our Platform and QA teams.',
+    date: 'Jun 2021',
+    dateTime: '2021-06',
   },
 ]
 
@@ -82,7 +82,7 @@ export default function About() {
         <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
             <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our people</h2>
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">The things I&apos;ve worked on</h2>
               <p className="mt-6 text-xl leading-8 text-gray-600">
                 Quasi est quaerat. Sit molestiae et. Provident ad dolorem occaecati eos iste. Soluta rerum quidem
                 minus ut molestiae velit error quod. Excepturi quidem expedita molestias quas.
@@ -95,7 +95,7 @@ export default function About() {
             <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
               <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
                 <img
-                  src="https://images.unsplash.com/photo-1670272502246-768d249768ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80"
+                  src="/flowup_img.jpeg"
                   alt=""
                   className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
                 />
@@ -103,21 +103,21 @@ export default function About() {
               <div className="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
                 <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
                   <img
-                    src="https://images.unsplash.com/photo-1605656816944-971cd5c1407f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
+                    src="/containers.png"
                     alt=""
                     className="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                   />
                 </div>
                 <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
                   <img
-                    src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&h=842&q=80"
+                    src="github.png"
                     alt=""
                     className="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                   />
                 </div>
                 <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
                   <img
-                    src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
+                    src="/speaking.jpeg"
                     alt=""
                     className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
                   />

@@ -1,21 +1,24 @@
-import React, { useContext } from "react";
-import { CategoryContext } from "./CategoryContext";
+import React from "react";
 
 interface BadgeProps {
-    category: 'Engineering' | 'Leadership';
+  category: string | 'Engineering' | 'Leadership';
+  className?: string;
 }
 
 export default function Badge(props: BadgeProps) {
-    const color = props.category === 'Engineering' ? 'bg-green-50 text-green-700' : 'bg-blue-50 text-blue-700';
-    const { toggleCategory } = useContext(CategoryContext);
+  const color = props.category === 'Engineering' ? 'bg-green-50 text-green-700' : 'bg-blue-50 text-blue-700';
 
+  const classNames = `
+    inline-flex items-center rounded-full
+    px-2 py-1 text-xs font-medium
+    ring-1 ring-inset ring-green-600/20 ${color}
+    ${props.className ?? ''}
+  `.trim();
 
-    return (
-        <span className={`inline-flex items-center rounded-full
-                    px-2 py-1 text-xs font-medium
-                    ring-1 ring-inset ring-green-600/20 ${color}`}
-                    onClick={() => {toggleCategory(props.category)}}>
-            {props.category}
-        </span>
-    );
+  return (
+    <span className={classNames}>
+      {props.category}
+    </span>
+  );
 }
+
