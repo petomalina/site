@@ -30,8 +30,10 @@ export default function RootLayout({
 
       <body className={inter.className}>
         <HeaderMenu></HeaderMenu>
-        {children}
-        </body>
+        <div className='px-6'>
+          {children}
+        </div>
+      </body>
     </html>
   )
 }

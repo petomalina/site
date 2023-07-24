@@ -22,6 +22,16 @@ export const generateStaticParams = async () => {
   }));
 }
 
+export const generateMetadata = async ({ params }: { params: { slug: string } }) => {
+  const post = getPost(params.slug);
+
+  return {
+    title: post.data.title,
+    description: post.data.excerpt,
+    image: post.data.coverImage,
+  }
+}
+
 export default async function BlogPost(props: { params: { slug: string } }) {
   const post = getPost(props.params.slug)
 

@@ -2,6 +2,13 @@ import Badge from "./Badge";
 import Link from "next/link";
 import { getPosts } from "@/lib/posts";
 
+export const generateMetadata = async () => {
+  return {
+    title: "Peter Malina's Blog",
+    description: "A mix of articles about engineering and leadership.",
+  };
+}
+
 export default function Blog() {
   const posts = getPosts();
 
@@ -10,7 +17,7 @@ export default function Blog() {
 
   return (
     <div className="bg-white py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-4xl">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Blog</h2>
           <p className="mt-2 text-lg leading-8 text-gray-600">
