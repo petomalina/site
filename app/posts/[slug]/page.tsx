@@ -12,7 +12,7 @@ function getPost(slug: string) {
 }
 
 export default async function BlogPost(props: { params: { slug: string } }) {
-  const post = getPost(props.params.slug);
+  const post = getPost(props.params.slug)
 
   return (
     <article className="pt-12">
@@ -29,7 +29,7 @@ export default async function BlogPost(props: { params: { slug: string } }) {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{post.data.title}</h2>
 
             <div className="text-gray-700 flex flex-col gap-4">
-              {await <MDXRemote source={post.content} />}
+              {await MDXRemote({ source: post.content }) }
             </div>
           </div>
         </div>
