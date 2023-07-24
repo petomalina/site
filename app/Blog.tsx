@@ -1,31 +1,6 @@
-import { ArrowPathIcon, PlusIcon } from "@heroicons/react/24/outline";
-import { createContext, useState } from "react";
 import Badge from "./Badge";
-import fs from "fs";
-import matter from "gray-matter";
-
-function getPosts() {
-  return fs.readdirSync("posts").filter((file) => file.endsWith(".md")).map((file) => {
-    const slug = file.replace(".md", "");
-    const { data } = matter(fs.readFileSync(`posts/${file}`, "utf8"));
-
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-
-    return {
-      title: data.title,
-      category: data.category,
-      slug: slug,
-      published: data.published,
-      date: data.date.toLocaleDateString("en-US", options),
-      excerpt: data.excerpt,
-      coverImage: data.coverImage,
-    };
-  })
-  .filter((post) => post.published)
-  .sort((a, b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime();
-  })
-}
+import Link from "next/link";
+import { getPosts } from "@/lib/posts";
 
 export default function Blog() {
   const posts = getPosts();
@@ -42,35 +17,34 @@ export default function Blog() {
             This blog is a mix of articles about engineering and leadership. You can see the category
             by looking at the badges of either <Badge category="Engineering" /> or <Badge category="Leadership" />.
           </p>
-          <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
+          <div className="mt-2 space-y-20 lg:mt-4 lg:space-y-20">
             {headlinePosts.map((post) => (
-              <article key={post.slug} className="relative isolate flex flex-col gap-8 lg:flex-row">
-                <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
-                  <img
-                    src={post.coverImage}
-                    alt=""
-                    className="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover"
-                  />
-                  <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
-                </div>
-                <div>
-                  <div className="flex items-center gap-x-4 text-xs">
-                    <time dateTime={post.date} className="text-gray-500">
-                      {post.date.toString()}
-                    </time>
-                    <Badge category={post.category}></Badge>
+              <Link key={post.slug} href={`posts/${post.slug}`}>
+                <article key={post.slug} className="relative isolate flex flex-col gap-4 pt-12 lg:flex-row">
+                  <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
+                    <img
+                      src={post.coverImage}
+                      alt=""
+                      className="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover"
+                    />
+                    <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
                   </div>
-                  <div className="group relative max-w-xl">
-                    <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                      <a href={"posts/" + post.slug}>
-                        <span className="absolute inset-0" />
+                  <div>
+                    <div className="flex items-center gap-x-4 text-xs">
+                      <time dateTime={post.date} className="text-gray-500">
+                        {post.date.toString()}
+                      </time>
+                      <Badge category={post.category}></Badge>
+                    </div>
+                    <div className="group relative max-w-xl">
+                      <h3 className="mt-1 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
                         {post.title}
-                      </a>
-                    </h3>
-                    <p className="mt-5 text-sm leading-6 text-gray-600">{post.excerpt}</p>
+                      </h3>
+                      <p className="mt-5 text-sm leading-6 text-gray-600">{post.excerpt}</p>
+                    </div>
                   </div>
-                </div>
-              </article>
+                </article>
+              </Link>
             ))}
           </div>
 
@@ -78,23 +52,22 @@ export default function Blog() {
             <h3 className="text-2xl font-bold tracking-tight text-gray-900 mb-8 sm:text-3xl">Older Posts</h3>
 
             {otherPosts.map((post) => (
-              <article key={post.slug} className="relative isolate flex gap-8 flex-row">
-                <div className="flex items-start gap-x-4 text-xs mt-1">
-                  <time dateTime={post.date} className="text-gray-500">
-                    {post.date}
-                  </time>
-                </div>
-                <div className="group relative max-w-xl">
-                  <h3 className="text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                    <a href={"posts/" + post.slug}>
-                      <span className="absolute inset-0" />
+              <Link key={post.slug} href={`posts/${post.slug}`}>
+                <article key={post.slug} className="max-w-2xl isolate flex gap-2 md:gap-6 flex-col md:flex-row">
+                  <div className="text-xs mt-1">
+                    <time dateTime={post.date} className="text-gray-500 whitespace-nowrap block w-24">
+                      {post.date}
+                    </time>
+                  </div>
+                  <div className="">
+                    <h3 className="flex flex-row flex-wrap gap-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
                       {post.title}
-                    </a>
-                    <Badge className="ml-3" category={post.category}></Badge>
-                  </h3>
-                  <p className="mt-1 text-sm leading-6 text-gray-600">{post.excerpt}</p>
-                </div>
-              </article>
+                      <Badge category={post.category}></Badge>
+                    </h3>
+                    <p className="mt-1 text-sm leading-6 text-gray-600">{post.excerpt}</p>
+                  </div>
+                </article>
+              </Link>
             ))}
           </div>
 

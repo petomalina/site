@@ -8,8 +8,6 @@ excerpt: |
 coverImage: https://source.unsplash.com/8Zt0xmgT8w4/1600x900
 ---
 
-# Building Platform Teams - Productisation
-
 Building a platform team is hard. This series of posts will help you build a platform team that is successful.
 
 ## What is a platform team?
