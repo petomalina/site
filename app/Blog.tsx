@@ -1,5 +1,6 @@
 import Badge from "./Badge";
 import Link from "next/link";
+import Image from "next/image";
 import { getPosts } from "@/lib/posts";
 
 export const generateMetadata = async () => {
@@ -16,7 +17,7 @@ export default function Blog() {
   const otherPosts = posts.slice(3);
 
   return (
-    <div className="bg-white py-24">
+    <div className="bg-white px-6">
       <div className="mx-auto max-w-7xl lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-4xl">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Blog</h2>
@@ -29,7 +30,8 @@ export default function Blog() {
               <Link key={post.slug} href={`posts/${post.slug}`}>
                 <article key={post.slug} className="relative isolate flex flex-col gap-4 pt-12 lg:flex-row">
                   <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
-                    <img
+                    <Image
+                      fill
                       src={post.coverImage}
                       alt=""
                       className="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover"

@@ -31,6 +31,29 @@ const timeline = [
   },
 ]
 
+const images = [
+  {
+    src: '/flowup_img.jpeg',
+    rotation: 'rotate-2',
+  },
+  {
+    src: '/containers.png',
+    rotation: '-rotate-1',
+  },
+  {
+    src: '/meetup.jpg',
+    rotation: 'rotate-1',
+  },
+  {
+    src: '/speaking.jpeg',
+    rotation: 'rotate-2',
+  },
+  {
+    src: '/github.png',
+    rotation: '-rotate-2',
+  },
+]
+
 export const generateMetadata = async () => {
   return {
     title: 'About Peter Malina',
@@ -40,28 +63,26 @@ export const generateMetadata = async () => {
 
 export default function About() {
   return (
-    <main className="isolate max-w-2xl lg:max-w-4xl mx-auto">
-      <div className="bg-white relative isolate -z-10 overflow-hidden bg-gradient-to-b from-indigo-100/20">
-        <div className="mx-auto max-w-7xl py-24">
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
-            <h1 className="max-w-1xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto">
-              Hi! I am Peter. <br />
-              <span className="text-2xl">Leader by the day, Engineer during night.</span>
-            </h1>
-            <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
-              <p className="text-lg leading-8 text-gray-600">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
-                amet fugiat veniam occaecat fugiat aliqua. Anim aute id magna aliqua ad ad non deserunt sunt. Qui
-                irure qui lorem cupidatat commodo.
-              </p>
-            </div>
-            <Image src="profile_pic.jpg" alt="Picutre of the author" width={500} height={500}
-              className="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36" />
+    <main className="isolate">
+      <div className="max-w-2xl lg:max-w-4xl px-6 mx-auto relative isolate -z-10 overflow-hidden bg-gradient-to-b">
+        <div className="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
+          <h1 className="max-w-1xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto">
+            Hi! I am Peter. <br />
+            <span className="text-2xl">Leader by the day, Engineer during night.</span>
+          </h1>
+          <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
+            <p className="text-lg leading-8 text-gray-600">
+              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
+              amet fugiat veniam occaecat fugiat aliqua. Anim aute id magna aliqua ad ad non deserunt sunt. Qui
+              irure qui lorem cupidatat commodo.
+            </p>
           </div>
+          <Image src="profile_pic.jpg" alt="Picutre of the author" width={500} height={500}
+            className="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36" />
         </div>
       </div>
 
-      <div className="mx-auto mt-8 max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto mt-16 max-w-7xl px-16">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4">
           {timeline.map((item) => (
             <div key={item.name}>
@@ -85,9 +106,22 @@ export default function About() {
         </div>
       </div>
 
-      <div className="mt-32 overflow-hidden sm:mt-40">
+      <div className="flex items-start gap-8 mt-16 overflow-hidden justify-center w-full">
+        {images.map((image) => (
+          <div key={image.src} className="relative flex w-64 h-64 aspect-[9/10]">
+            <Image
+              fill
+              src={image.src}
+              alt=""
+              className={`h-full w-full rounded-2xl bg-gray-50 object-cover ${image.rotation}`}
+            />
+          </div>
+        ))}
+      </div>
+
+      <div className="max-w-2xl lg:max-w-4xl mx-auto mt-16   overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
-          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
+          <div className="flex flex-col">
             <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">The things I&apos;ve worked on</h2>
               <p className="mt-6 text-xl leading-8 text-gray-600">
@@ -98,38 +132,6 @@ export default function About() {
                 Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
                 amet fugiat veniam occaecat fugiat. Quasi aperiam sit non sit neque reprehenderit.
               </p>
-            </div>
-            <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
-              <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
-                <img
-                  src="/flowup_img.jpeg"
-                  alt=""
-                  className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
-                />
-              </div>
-              <div className="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
-                <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
-                  <img
-                    src="/containers.png"
-                    alt=""
-                    className="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
-                  />
-                </div>
-                <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
-                  <img
-                    src="github.png"
-                    alt=""
-                    className="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
-                  />
-                </div>
-                <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
-                  <img
-                    src="/speaking.jpeg"
-                    alt=""
-                    className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
-                  />
-                </div>
-              </div>
             </div>
           </div>
         </div>

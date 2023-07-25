@@ -36,7 +36,7 @@ export default async function BlogPost(props: { params: { slug: string } }) {
   const post = getPost(props.params.slug)
 
   return (
-    <article className="relative mx-auto max-w-2xl lg:max-w-4xl text-gray-900 py-24">
+    <article className="relative mx-auto max-w-2xl lg:max-w-4xl text-gray-900 px-6">
       <Link href={"/"}>
         <div className="pb-6 pt-6 flex flex-row items-center">
           <button
