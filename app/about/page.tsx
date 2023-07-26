@@ -82,7 +82,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="mx-auto mt-16 max-w-7xl px-16">
+      <div className="mx-auto mt-16 max-w-5xl px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4">
           {timeline.map((item) => (
             <div key={item.name}>
@@ -106,7 +106,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="flex items-start gap-8 mt-16 overflow-hidden justify-center w-full">
+      <div className="flex gap-8 mt-16 mx-8 -scroll-mr-40 overflow-hidden overflow-x-scroll">
         {images.map((image) => (
           <div key={image.src} className="relative flex w-64 h-64 aspect-[9/10]">
             <Image
@@ -119,7 +119,7 @@ export default function About() {
         ))}
       </div>
 
-      <div className="max-w-2xl lg:max-w-4xl mx-auto mt-16   overflow-hidden">
+      <div className="max-w-2xl lg:max-w-4xl mx-auto mt-16">
         <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
           <div className="flex flex-col">
             <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">

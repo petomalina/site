@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import Link from "next/link";
 import { getPosts } from "@/lib/posts";
+import Image from "next/image";
 
 function getPost(slug: string) {
   const { data, content } = matter(fs.readFileSync(`posts/${slug}.md`, "utf8"));
@@ -49,8 +50,9 @@ export default async function BlogPost(props: { params: { slug: string } }) {
         </div>
       </Link>
 
-      <div className="relative sm:aspect-[2.5/1] md:aspect-[3/1]">
-        <img
+      <div className="relative aspect-[2.5/1.5] md:aspect-[5/2.3]">
+        <Image
+          fill
           src={post.data.coverImage}
           alt=""
           className="md:max-w-2xl lg:max-w-4xl mx-auto inset-0 h-full w-full bg-gray-50 object-cover"

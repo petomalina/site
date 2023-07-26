@@ -1,6 +1,7 @@
 
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const navigation = [
   { name: 'Blog', href: '/' },
@@ -11,10 +12,12 @@ export default function HeaderMenu() {
 
   return (
     <header className="bg-gradient-to-r from-blue-800 to-purple-900">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div className="flex hidden sm:block">
-          <a href="/" className="-m-1.5 p-1.5">
-            <span className="font-semibold">PeterMalina.com</span>
+      <nav className="mx-auto flex max-w-2xl lg:max-w-4xl items-center justify-between py-6 px-6 md:px-0" aria-label="Global">
+        <div className="flex">
+          <a href="/" className="-m-1.5 flex flex-row items-center gap-4">
+            <div className="relative p-6">
+              <Image fill src={"/raspberry.png"} alt="raspberry logo" />
+            </div>
           </a>
         </div>
         <div className="flex gap-x-12">
