@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark:bg-slate-800 bg-white">
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-PL039FBCJB" />
       <Script id="google-analytics">
         {`
@@ -30,7 +30,7 @@ export default function RootLayout({
 
       <body className={inter.className}>
         <HeaderMenu></HeaderMenu>
-        <div className='pt-12 md:pt-20'>
+        <div className='pt-12 md:pt-20 dark:text-white text-gray-600'>
           {children}
         </div>
       </body>

@@ -37,12 +37,12 @@ export default async function BlogPost(props: { params: { slug: string } }) {
   const post = getPost(props.params.slug)
 
   return (
-    <article className="relative mx-auto max-w-2xl lg:max-w-4xl text-gray-900 px-6">
+    <div className="relative mx-auto max-w-2xl lg:max-w-4xl px-6">
       <Link href={"/"}>
         <div className="pb-6 pt-6 flex flex-row items-center">
           <button
             type="button"
-            className="rounded-full bg-indigo-600 p-1.5 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="rounded-full bg-indigo-600 p-1.5 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             <ArrowLongLeftIcon className="h-5 w-5" aria-hidden="true" />
           </button>
@@ -58,13 +58,13 @@ export default async function BlogPost(props: { params: { slug: string } }) {
           className="md:max-w-2xl lg:max-w-4xl mx-auto inset-0 h-full w-full bg-gray-50 object-cover"
         />
       </div>
-      <div className="py-12">
-        <h1 className="font-bold tracking-tight text-gray-900 sm:text-4xl pb-8">{post.data.title}</h1>
+      <article className="py-12 prose-lg dark:prose-invert">
+        <h1 className="font-bold tracking-tight sm:text-4xl pb-8">{post.data.title}</h1>
 
-        <div className="text-gray-700 flex flex-col gap-4">
+        <div className="flex flex-col">
           {await MDXRemote({ source: post.content })}
         </div>
-      </div>
-    </article>
+      </article>
+    </div>
   )
 }

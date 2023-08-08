@@ -3,14 +3,12 @@
 @tailwind utilities;
 
 @layer base {
-  h1 {
-    @apply text-2xl;
+  blockquote {
+    @apply border-l-4 border-gray-400 pl-4 my-4;
   }
-  h2 {
-    @apply text-xl;
-  }
-  h3 {
-    @apply text-lg;
+
+  blockquote > p {
+    @apply p-0 m-0 !important;
   }
 }
 

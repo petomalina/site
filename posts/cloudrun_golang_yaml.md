@@ -2,7 +2,7 @@
 title: Deploying a Golang Cloud Run Service with YAML
 category: Engineering
 date: 2023-07-28
-published: true
+published: false
 excerpt: |
     Cloud Run is a great way to run serverless containers. This post shows you how to deploy a Golang service to Cloud Run using YAML.
 coverImage: https://source.unsplash.com/8Zt0xmgT8w4/1600x900

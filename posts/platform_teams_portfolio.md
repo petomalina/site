@@ -2,7 +2,7 @@
 title: Building Platform Teams - Portfolio
 category: Leadership
 date: 2023-08-08
-published: true
+published: false
 excerpt: |
     Building a platform team is hard. This series of posts will help you build a platform team that is successful.
 coverImage: https://source.unsplash.com/8Zt0xmgT8w4/1600x900
