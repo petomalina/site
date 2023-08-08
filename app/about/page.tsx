@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const timeline = [
   {
-    name: 'Worked at multiple startups',
+    name: 'Worked with multiple startups',
     description:
       'I\'ve always loved startups for their fast-paced, impact driven environment. At the start of my career, I\'ve had a chance to work for a few.',
     date: 'Nov 2013',
@@ -68,13 +68,13 @@ export default function About() {
         <div className="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
           <h1 className="max-w-1xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto">
             Hi! I am Peter. <br />
-            <span className="text-2xl">Leader by the day, Engineer during night.</span>
+            <span className="text-2xl">Leader by the day, Engineer during the night.</span>
           </h1>
           <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
             <p className="text-lg leading-8 text-gray-600">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
-              amet fugiat veniam occaecat fugiat aliqua. Anim aute id magna aliqua ad ad non deserunt sunt. Qui
-              irure qui lorem cupidatat commodo.
+              As you can tell from my blog, I love the combination of technology and people. As a person with many ideas
+              and a head in the future, I have always strived to make impact in lives of others. I believe that the best way to do so is to
+              combine great leadership with outstanding engineering.
             </p>
           </div>
           <Image src="profile_pic.jpg" alt="Picutre of the author" width={500} height={500}
