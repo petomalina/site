@@ -28,7 +28,7 @@ In my couple of years of experience as a leader, I’ve asked these questions on
 
 Some managers will argue that without efficiency metrics, we can't say whether we just had luck with our delivery or are actually good at what we do. But would you rather run slow in the right direction or fast in the wrong one? Efficiency metrics take our focus away from the actual value we should be creating for a false sense of control over the team.
 
-> We placed rocket boosters on our car. Now we go fast, just don’t know where.
+> We placed rocket boosters on our car instead of planning the trip. Now we go fast, just don’t know where.
 
 ## A way out
 
