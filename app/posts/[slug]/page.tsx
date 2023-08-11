@@ -30,6 +30,16 @@ export const generateMetadata = async ({ params }: { params: { slug: string } })
     title: post.data.title,
     description: post.data.excerpt,
     image: post.data.coverImage,
+    openGraph: {
+      type: "article",
+      locale: 'en_US',
+      article: {
+        title: post.data.title,
+        description: post.data.excerpt,
+        images: [post.data.coverImage],
+        publishedTime: post.data.date,
+      },
+    },
   }
 }
 
