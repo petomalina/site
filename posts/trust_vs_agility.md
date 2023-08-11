@@ -1,5 +1,5 @@
 ---
-title: Why Trust is more than Agility
+title: Why Trust is More than Agility
 category: Leadership
 date: 2023-08-12
 published: true
@@ -24,9 +24,9 @@ It’s incredibly easy to get sidetracked once we start playing the game of mist
 
 Well, I believe every leader must be able to answer why their team exists, what kind of challenge they are solving for their users, and how they know they are running in the right direction (when are they successful). And so, forging agile numbers for an efficiency report is meaningless because a team’s success reflects its efficiency. 
 
-In my couple of years of experience as a leader, I’ve asked these questions one too many times, and it almost always catches people off guard - especially those working for larger companies. “We are just a small part of a large project, and so we know we are successful when we deliver what our manager wants from us” - some answer. This is a standard answer indicating that the company has sacrificed customer value creation for nice-looking reports giving a sense of control to senior managers and investors.
+In my couple of years of experience as a leader, I’ve asked these questions one too many times, and it almost always catches people off guard - especially those working for larger companies. “We are just a small part of a large project, and so we know we are successful when we deliver what our manager wants from us” - some answer. This indicates that the company has sacrificed customer value creation for nice-looking reports giving a sense of control to senior managers and investors.
 
-Some managers will argue that without efficiency metrics, we can't say whether we just had luck with our delivery or are actually good at what we do. But would you rather run slow in the right direction or fast in the wrong one? Efficiency metrics take our focus away from the actual value we should be creating for a false sense of control over the team.
+Some managers will argue that without efficiency metrics, we can't say whether we just had luck with our delivery or are actually good at what we do. But would you rather run slow in the right direction or fast in the wrong one? Efficiency metrics take our focus away from the actual value we should be creating for a false sense of control over the team. Once we know where our success lies, we can run fast in the right direction.
 
 > We placed rocket boosters on our car instead of planning the trip. Now we go fast, just don’t know where.
 
@@ -34,14 +34,14 @@ Some managers will argue that without efficiency metrics, we can't say whether w
 
 I’ve been ranting until now, but what can we do about this?
 
-For now, my only working cure was to directly approach the managing team members and ask them how they perceive the work of my teams. At the time, I was leading infrastructure teams handling a cloud budget for tens of teams across the company. Their answer surprised me: “If we don’t hear about you, it’s positive because we only hear about the screw-ups in the budget.”
+For now, my only working cure was to directly approach the managing team and ask them how they perceive the work of my teams. At the time, I led infrastructure teams handling a cloud budget for tens of other teams across the company. Their answer surprised me: “If we don’t hear about you, it’s positive because we only hear about the screw-ups in the budget.”
 
-I got into thinking and came up with a simple report of our success, reflecting the unit economics of the business (how much on infrastructure do we pay for each customer transaction). I’ve made it a mission of my teams to make this information easily reachable and addressable for any engineering team. And so a couple of weeks after, instead of reporting only what went wrong, we could report the value for our users (engineering teams). This shifted the focus of senior managers from the team efficiency metrics to the actual numbers of success that impact business.
+I got into thinking and came up with a simple report of our success, reflecting the unit economics of the business (how much on infrastructure do we pay for each customer transaction). I’ve made it a mission of my teams to make this information easily reachable and addressable for any engineering team. And so a couple of weeks after, instead of reporting only what went wrong, we could report the value for our users (engineering teams). This shifted the focus of senior managers from the team efficiency metrics to the actual numbers of success that impact business. And so the trust of the managing team grew, and developer efficiency metrics became secondary.
 
-> Note on the value of unit economics observability: startup-culture companies like to move fast even with a trade-off of sometimes breaking things. Adding near-realtime information about spend across ~30 infrastructrure & tooling vendors helps us avoid costly reverts when the invoices come in, since we can revert or patch solutions the next day. This saves both, budget, and time of engineers. 
+> Note on the value of unit economics observability: startup-culture companies like to move fast even with a trade-off of sometimes breaking things. Adding near-realtime information about spend across ~30 infrastructrure & tooling vendors helps us avoid costly reverts when the invoices come in, since we can revert or patch releases the next day. This saves both, budget, and time of engineers. 
 
 ## Wrapping up
 
 It all starts with building mutual trust. **Only if we trust each other can we avoid meaningless numbers** that give us a fake sense of control and focus on what’s growing the company to serve our users better.
 
-Instead of measuring story points or sprints, find a way to measure your success in terms of value for your users. Everything else will follow naturally. Once you have that and find story points or ceremonies useful, go ahead and use them. However, don’t let them become a goal in itself. 
+Instead of first measuring story points or sprints, find a way to measure your success in terms of value for your users. Everything else will follow naturally. Once you have that and find story points or ceremonies useful, go ahead and use them. However, don’t let them become a goal in itself.

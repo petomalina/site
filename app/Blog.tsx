@@ -21,7 +21,7 @@ export default function Blog() {
       <div className="mx-auto max-w-7xl lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-4xl">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Blog</h2>
-          <p className="mt-2 text-lg leading-8">
+          <p className="mt-2 text-sm leading-8">
             This blog is a mix of articles about engineering and leadership. You can see the category
             by looking at the badges of either <Badge category="Engineering" /> or <Badge category="Leadership" />.
           </p>
@@ -46,7 +46,7 @@ export default function Blog() {
                       <Badge category={post.category}></Badge>
                     </div>
                     <div className="group relative max-w-xl">
-                      <h3 className="mt-1 text-lg font-semibold leading-6 group-hover:text-gray-600">
+                      <h3 className="mt-1 text-lg font-semibold leading-6 group-hover:text-gray-500 dark:group-hover:text-gray-300">
                         {post.title}
                       </h3>
                       <p className="mt-5 text-sm leading-6">{post.excerpt}</p>
