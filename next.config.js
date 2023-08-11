@@ -15,6 +15,7 @@ const withMDX = require('@next/mdx')({
 const nextConfig = {
     // output: 'export',
     // images: { unoptimized: true },
+    output: 'standalone',
 }
 
 module.exports = withMDX(nextConfig)
