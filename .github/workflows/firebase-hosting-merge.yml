@@ -25,3 +25,4 @@ jobs:
         with:
           service: petermalina-site
           image: europe-west3-docker.pkg.dev/petermalina/petermalina-site/petermalina-site:${{ github.sha }}
+          region: europe-west3
