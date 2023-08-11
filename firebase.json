@@ -20,12 +20,16 @@
     }
   ],
   "hosting": {
-    "public": "out",
     "cleanUrls": true,
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
+    "rewrites": [
+      {
+        "source": "**",
+        "run": {
+          "serviceId": "petermalina-site",
+          "region": "europe-west3",
+          "pinTag": true
+        }
+      }
     ]
   },
   "remoteconfig": {
