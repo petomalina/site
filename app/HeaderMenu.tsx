@@ -15,6 +15,7 @@ export default function HeaderMenu() {
             <div className="relative p-6">
               <Image fill src={"/raspberry.png"} alt="raspberry logo" />
             </div>
+            <div className="font-semibold sm:block hidden">Peter Malina</div>
           </a>
         </div>
         <div className="flex gap-x-12">
