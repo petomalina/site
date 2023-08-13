@@ -27,7 +27,6 @@
         "run": {
           "serviceId": "petermalina-site",
           "region": "europe-west3",
-          "pinTag": true
         }
       }
     ]
