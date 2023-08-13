@@ -5,6 +5,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import Link from "next/link";
 import { getPosts } from "@/lib/posts";
 import Image from "next/image";
+import { readingTime } from "@/app/readingTime";
 
 function getPost(slug: string) {
   const { data, content } = matter(fs.readFileSync(`posts/${slug}.md`, "utf8"));
@@ -25,9 +26,10 @@ export const generateStaticParams = async () => {
 
 export const generateMetadata = async ({ params }: { params: { slug: string } }) => {
   const post = getPost(params.slug);
+  const readTime = readingTime(post.content);
 
   return {
-    title: post.data.title,
+    title: post.data.title + ` (${readTime} min)`,
     description: post.data.excerpt,
     image: post.data.coverImage,
     openGraph: {
@@ -45,6 +47,7 @@ export const generateMetadata = async ({ params }: { params: { slug: string } })
 
 export default async function BlogPost(props: { params: { slug: string } }) {
   const post = getPost(props.params.slug)
+  const readTime = readingTime(post.content)
 
   return (
     <div className="relative mx-auto max-w-2xl lg:max-w-4xl px-6">
@@ -69,7 +72,10 @@ export default async function BlogPost(props: { params: { slug: string } }) {
         />
       </div>
       <article className="py-12 prose-lg dark:prose-invert">
-        <h1 className="font-bold tracking-tight sm:text-4xl pb-8">{post.data.title}</h1>
+        <div>({readTime} min)</div>
+        <h1 className="font-bold tracking-tight sm:text-4xl pb-8 flex flex-row">
+          {post.data.title}
+        </h1>
 
         <div className="flex flex-col">
           {await MDXRemote({ source: post.content })}

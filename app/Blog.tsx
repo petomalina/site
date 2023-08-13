@@ -47,7 +47,7 @@ export default function Blog() {
                     </div>
                     <div className="group relative max-w-xl">
                       <h3 className="mt-1 text-lg font-semibold leading-6 group-hover:text-gray-500 dark:group-hover:text-gray-300">
-                        {post.title}
+                        {post.title} {post.readTime && `(${post.readTime} min)`}
                       </h3>
                       <p className="mt-5 text-sm leading-6">{post.excerpt}</p>
                     </div>

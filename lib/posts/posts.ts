@@ -1,10 +1,11 @@
+import { readingTime } from "@/app/readingTime";
 import fs from "fs";
 import matter from "gray-matter";
 
 export function getPosts() {
   return fs.readdirSync("posts").filter((file) => file.endsWith(".md")).map((file) => {
     const slug = file.replace(".md", "");
-    const { data } = matter(fs.readFileSync(`posts/${file}`, "utf8"));
+    const { data, content } = matter(fs.readFileSync(`posts/${file}`, "utf8"));
 
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
 
@@ -16,6 +17,7 @@ export function getPosts() {
       date: data.date.toLocaleDateString("en-US", options),
       excerpt: data.excerpt,
       coverImage: data.coverImage,
+      readTime: readingTime(content),
     };
   })
     .filter((post) => post.published)
