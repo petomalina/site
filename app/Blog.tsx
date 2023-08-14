@@ -25,7 +25,7 @@ export default function Blog() {
             This blog is a mix of articles about engineering and leadership. You can see the category
             by looking at the badges of either <Badge category="Engineering" /> or <Badge category="Leadership" />.
           </p>
-          <div className="mt-2 space-y-20 lg:mt-4 lg:space-y-20">
+          <main className="mt-2 space-y-20 lg:mt-4 lg:space-y-20">
             {headlinePosts.map((post) => (
               <Link key={post.slug} href={`posts/${post.slug}`}>
                 <article key={post.slug} className="relative isolate flex flex-col gap-4 pt-12 lg:flex-row">
@@ -55,7 +55,7 @@ export default function Blog() {
                 </article>
               </Link>
             ))}
-          </div>
+          </main>
 
           <div className="flex flex-col mt-16 space-y-6 lg:mt-20">
             <h3 className="text-2xl font-bold tracking-tight mb-8 sm:text-3xl">Older Posts</h3>

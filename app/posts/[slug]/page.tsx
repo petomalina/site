@@ -71,16 +71,25 @@ export default async function BlogPost(props: { params: { slug: string } }) {
           className="md:max-w-2xl lg:max-w-4xl mx-auto inset-0 h-full w-full bg-gray-50 object-cover"
         />
       </div>
-      <article className="py-12 prose-lg dark:prose-invert">
+      <main className="py-12 prose-lg dark:prose-invert">
         <div>({readTime} min)</div>
-        <h1 className="font-bold tracking-tight sm:text-4xl pb-8 flex flex-row">
+        <h1 className="font-bold tracking-tight sm:text-4xl flex flex-row">
           {post.data.title}
         </h1>
 
-        <div className="flex flex-col">
+        <article className="flex flex-col">
           {await MDXRemote({ source: post.content })}
-        </div>
-      </article>
+        </article>
+      </main>
+
+      <div className="border-t-2 border-white p-4">
+        <a href="https://www.linkedin.com/in/petomalina/" target="_blank" className="flex flex-row gap-4 justify-center items-center">
+          <h3 className="font-bold">Struggling with delivery? Contact me on LinkedIn</h3>
+          <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" className="fill-white">
+            <path d="M14.4 0H1.6C.7 0 0 .7 0 1.6v12.8C0 15.3.7 16 1.6 16h12.8c.9 0 1.6-.7 1.6-1.6V1.6c0-.9-.7-1.6-1.6-1.6zM4.8 13.2H2.4V6.4h2.4v6.8zm-1.2-8c-.8 0-1.2-.5-1.2-1.2 0-.7.5-1.2 1.2-1.2s1.2.5 1.2 1.2c0 .7-.5 1.2-1.2 1.2zm9.6 8h-2.4v-4.4c0-1.1-.4-1.8-1.3-1.8-.7 0-1.1.5-1.3 1-.1.2-.1.5-.1.8v4.4H6V6.4h2.3v1.1c.3-.5.8-1.2 2-1.2 1.5 0 2.7 1 2.7 3.2v4.7z"></path>
+          </svg>
+        </a>
+      </div>
     </div>
   )
 }
