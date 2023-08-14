@@ -29,6 +29,7 @@ export const generateMetadata = async ({ params }: { params: { slug: string } })
   const readTime = readingTime(post.content);
 
   return {
+    metadataBase: new URL('https://petermalina.com'),
     title: post.data.title + ` (${readTime} min)`,
     description: post.data.excerpt,
     image: post.data.coverImage,
