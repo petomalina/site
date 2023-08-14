@@ -32,10 +32,12 @@ export const generateMetadata = async ({ params }: { params: { slug: string } })
     title: post.data.title + ` (${readTime} min)`,
     description: post.data.excerpt,
     image: post.data.coverImage,
+    authors: ['Peter Malina'],
     openGraph: {
       type: "article",
       locale: 'en_US',
       images: [post.data.coverImage],
+      publishedTime: post.data.date,
       article: {
         title: post.data.title,
         description: post.data.excerpt,
