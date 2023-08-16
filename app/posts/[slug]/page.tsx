@@ -75,7 +75,7 @@ export default async function BlogPost(props: { params: { slug: string } }) {
           className="md:max-w-2xl lg:max-w-4xl mx-auto inset-0 h-full w-full bg-gray-50 object-cover"
         />
       </div>
-      <main className="py-12 prose-lg dark:prose-invert">
+      <main className="py-12 prose-lg dark:prose-invert prose-li:list-disc prose-ul:mt-0">
         <div>({readTime} min)</div>
         <h1 className="font-bold tracking-tight sm:text-4xl flex flex-row">
           {post.data.title}
