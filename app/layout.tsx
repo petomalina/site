@@ -27,7 +27,11 @@ export default function RootLayout({
           gtag('config', 'G-PL039FBCJB');
         `}
       </Script>
-
+      <Script
+        src="https://js.sentry-cdn.com/f294ed98cde58bd52937aeb7b7a21c08.min.js"
+        crossOrigin="anonymous"
+      />
+      
       <body className={inter.className}>
         <HeaderMenu></HeaderMenu>
         <div className='pt-12 md:pt-20 dark:text-white text-gray-600'>
