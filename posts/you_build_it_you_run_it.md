@@ -1,8 +1,8 @@
 ---
 title: What went wrong with "You build it, you run it" 
 category: Engineering
-date: 2023-09-12
-published: false
+date: 2023-09-08
+published: true
 excerpt: |
     The idea of "you build it, you run it" was very promising to me a couple of years ago. Unfortunately, its execution
     is far more complicated than it seems. Turns out it's not a silver bullet.
@@ -13,7 +13,7 @@ coverImage: /you_build_it_you_run_it.png
 
 If you've lived close to the DevOps world in the past couple of years, the idea of "You build it, you run it" is not new to you.
 I loved it because it **theoretically solves the challenge of interactivity between users and engineers**. If a user has a problem,
-an engineer now has that problem. No more throwing of issues across invisible walls because "it's my job to write, not to scale the application."
+an engineer now has that problem. No more throwing of issues across invisible walls because "it's my job to write, yours to operate the application."
 
 As years passed and I tried to get closer to this vision with the teams I led, I observed a couple of clashes with other principles I wanted to follow.
 As an example, at Kiwi.com, we sell flight tickets. A value proposition of an engineer should thus be that we will **sustainably sell more** tickets.
@@ -42,11 +42,11 @@ motivated engineer will have extremely high output with proper guidance. Moreove
 As the company grows, it shifts into the cooperation mode. Why do we let every team reinvent their delivery process when we can invest once and let everyone else leverage it? Can we start using the same logging techniques so we can actually find stuff? Can we use the same technology so we can learn
 from each other? Suddenly, all the flexibility becomes secondary as building applications at scale becomes challenging.
 
-Companies nowadays make Platform teams to address these scaling issues. Such teams provide company **standards and golden paths that avoid the complexity** of underlying (more efficient) technology. The value of a Platform team is more or less purely economic in this sense. The platform combines technologies into non-flexible but highly efficient bundles. Unfortunately, most of the ideas behind "You build it, you run it" are, at this point, no longer present because the company relies on an internal, well-defined stack of technologies.
+Companies nowadays make Platform teams to address these scaling issues. Such teams provide company **standards and golden paths that avoid the complexity** of underlying (more efficient) technology. The value of a Platform team is more or less purely economic in this sense (saving time and money for others by doing things in a standardized manner that scales sub-linearly). The platform combines technologies into non-flexible but highly efficient bundles. Unfortunately, most of the ideas behind "You build it, you run it" are, at this point, no longer present because the company relies on an internal, well-defined stack of technologies.
 
 ## Finding the Breakpoint
 
-We can't let people go full YOLO on technologies, but investing in tools or platforms also has limits. I like to think about any internal project that doesn't directly benefit end customers (the ones that pay your salary) as temporary. Generally, we want a platform project only if it positively affects:
+We can't let people go full YOLO on technologies, and investing in tools or platforms also has limits. I like to think about any internal project that doesn't directly benefit end customers (the ones that pay your salary) as temporary. Generally, we want a platform project only if it positively affects:
 - Engineering Productivity, or
 - Workload Efficiency
 
@@ -56,6 +56,6 @@ The workload efficiency seems simple, but it is complex. Many optimizations, e.g
 
 ## Wrapping up
 
-It was tough for me to realize that internal engineering teams such as platforms don't primarily have value when built around shiny new technology but around dull, well-defined standards. Exploration of technologies must still be part of the team, and we must deeply consider the value we bring with the new technology.
+It was tough for me to realize that internal engineering teams such as platforms don't primarily have value when built around shiny new technology but around dull, well-defined standards. Exploration of technologies must still be part of the team tho, but we must deeply consider the value we bring with the new technology.
 
 I still find the idea of teams building and running everything end-to-end intriguing and want to follow it until its breakpoint. But I also know that the concept has its limits, and we can easily get sidetracked by the idea of perfection. **Ultimately, we must accept that some things will never be worth making perfect.**
